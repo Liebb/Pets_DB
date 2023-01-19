@@ -184,6 +184,7 @@ CREATE TABLE[Pet].Dogs(
     IdBreed int NOT NULL
         CONSTRAINT FK_Dogs_IdBreed_Breeds_IdBreed
         FOREIGN KEY REFERENCES [Pet].Breeds (IdBreed),
+    DogName varchar(20) NULL,
     Birthdate date NULL,
     Color varchar(15) NULL,
     Gender bit NOT NULL,

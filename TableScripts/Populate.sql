@@ -75,13 +75,14 @@ VALUES
 GO
 INSERT INTO [Pet].Dogs (
     IdBreed,
+    DogName,
     Birthdate,
     Color,
     Gender,
     AuditCreateUser
     )
 VALUES
-    (1, '2021-10-20', 'Cafe castaño', 1,1)
+    (1,'Luna', '2021-10-20', 'Cafe castaño', 1,1)
 
 GO
 SELECT * FROM [Security].[Rol];
