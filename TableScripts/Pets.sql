@@ -16,7 +16,7 @@ CREATE TABLE [Security].Rol(
     IdRol int IDENTITY(1,1) NOT NULL
         CONSTRAINT PK_Rol_IdRol
         PRIMARY KEY CLUSTERED,
-    [Name] varchar(30) NOT NULL 
+    RolName varchar(30) NOT NULL 
         CONSTRAINT UQ_Rol_Name
         UNIQUE NONCLUSTERED,
     [Status] bit NOT NULL
@@ -62,6 +62,9 @@ CREATE TABLE [Person].Employee(
     IdEmployee int IDENTITY(1,1) NOT NULL
         CONSTRAINT PK_Employee_IdEmployee
         PRIMARY KEY CLUSTERED,
+     IdPerson int NOT NULL 
+        CONSTRAINT FK_Employee_IdPerson_Person_IdPerson
+        FOREIGN KEY REFERENCES [Person].Person (IdPerson),
     IdRol int NOT NULL 
         CONSTRAINT FK_Employee_IdRol_Rol_IdRol
         FOREIGN KEY REFERENCES [Security].Rol (IdRol),

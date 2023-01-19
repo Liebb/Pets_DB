@@ -1,11 +1,11 @@
 USE PETS_DB
 GO
 INSERT INTO [Security].[Rol] (
-    [Name], 
+    RolName, 
     RolInfo) 
 VALUES
     ('Admin', 'Rol que se encarga de administrar el sistema.'),
-    ('Secretary', 'Administra las citas y solicitudes.'),
+    ('Secretary', 'Administra las citas y solicitudes.'), 
     ('Client', 'Usuario que interactúa con el sistema.');
 GO
 INSERT INTO [Person].[Salary] (
@@ -31,13 +31,14 @@ VALUES
 GO
 INSERT INTO [Person].[Employee] (
   IdRol,
+  IdPerson,
   IdSalary,
   InssNumber,
   AuditCreateUser
     )
 VALUES
-    (1, 3, 123456789012,1),
-    (2, 1, 123456789013,1)
+    (1, 2, 3, 123456789012,1),
+    (2, 3, 1, 123456789013,1)
 GO
 INSERT INTO [Account].[User] (
     IdPerson,
