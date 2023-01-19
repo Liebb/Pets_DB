@@ -160,7 +160,7 @@ CREATE TABLE[Pet].Breeds(
     IdBreed int IDENTITY(1,1) NOT NULL
         CONSTRAINT PK_Breeds_IdBreed
             PRIMARY KEY CLUSTERED,
-    [Name] varchar(20) NOT NULL 
+    BreedName varchar(20) NOT NULL 
         CONSTRAINT UQ_Breeds_Name
         UNIQUE NONCLUSTERED,
     [Status] int NOT NULL

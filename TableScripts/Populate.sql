@@ -66,7 +66,7 @@ VALUES
     (2, GETDATE())
 GO
 INSERT INTO [Pet].Breeds (
-    [Name],
+    BreedName,
     InfoBreeds,
     AuditCreateUser
     )
